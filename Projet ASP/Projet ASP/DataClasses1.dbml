@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="GestiondeLivraison" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=DESKTOP-2COVDEG;Initial Catalog=GestiondeLivraison;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="GestiondeLivraisonConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.commande" Member="commande">
+    <Type Name="commande">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="code" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Client" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Telephone" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Adresse" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="NomProduit" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Vendeur" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Prix" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DateLivraison" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Etat" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="dateDepot" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="note" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="idFacture" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="idVendeur" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ville" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Association Name="Facture_commande" Member="Facture" ThisKey="idFacture" OtherKey="idFacture" Type="Facture" IsForeignKey="true" />
+      <Association Name="Vendeur_commande" Member="Vendeur1" ThisKey="idVendeur" OtherKey="idVendeur" Type="Vendeur" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Facture" Member="Facture">
+    <Type Name="Facture">
+      <Column Name="idFacture" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="code" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="dateCreation" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Etat" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="Facture_commande" Member="commande" ThisKey="idFacture" OtherKey="idFacture" Type="commande" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Livreur" Member="Livreur">
+    <Type Name="Livreur">
+      <Column Name="idLivreur" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="nom" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="telephone" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="adresse" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CIN" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="idville" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LoginL" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="PassL" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="Ville_Livreur" Member="Ville" ThisKey="idville" OtherKey="idville" Type="Ville" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.utilisateur" Member="utilisateur">
+    <Type Name="utilisateur">
+      <Column Name="idUtilisateur" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="lgn" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="code" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Nom" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Telephone" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Adresse" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CIN" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="idville" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TypeUser" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="Ville_utilisateur" Member="Ville" ThisKey="idville" OtherKey="idville" Type="Ville" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Vendeur" Member="Vendeur">
+    <Type Name="Vendeur">
+      <Column Name="idVendeur" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="nom" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Adresse" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TypeVendeur" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="LoginV" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="PassV" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="Vendeur_commande" Member="commande" ThisKey="idVendeur" OtherKey="idVendeur" Type="commande" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Ville" Member="Ville">
+    <Type Name="Ville">
+      <Column Name="idville" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="label" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="Ville_Livreur" Member="Livreur" ThisKey="idville" OtherKey="idville" Type="Livreur" />
+      <Association Name="Ville_utilisateur" Member="utilisateur" ThisKey="idville" OtherKey="idville" Type="utilisateur" />
+    </Type>
+  </Table>
+</Database>

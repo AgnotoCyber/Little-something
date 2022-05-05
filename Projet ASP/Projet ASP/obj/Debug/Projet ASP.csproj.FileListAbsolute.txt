@@ -1,0 +1,22 @@
+D:\ISTA\ASP.Net\Projet ASP\Projet ASP\obj\Debug\Projet ASP.csprojResolveAssemblyReference.cache
+D:\ISTA\ASP.Net\Projet ASP\Projet ASP\bin\roslyn\csc.exe
+D:\ISTA\ASP.Net\Projet ASP\Projet ASP\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\ISTA\ASP.Net\Projet ASP\Projet ASP\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\ISTA\ASP.Net\Projet ASP\Projet ASP\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\ISTA\ASP.Net\Projet ASP\Projet ASP\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\ISTA\ASP.Net\Projet ASP\Projet ASP\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\ISTA\ASP.Net\Projet ASP\Projet ASP\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\ISTA\ASP.Net\Projet ASP\Projet ASP\bin\roslyn\System.Collections.Immutable.dll
+D:\ISTA\ASP.Net\Projet ASP\Projet ASP\bin\roslyn\System.Reflection.Metadata.dll
+D:\ISTA\ASP.Net\Projet ASP\Projet ASP\bin\roslyn\vbc.exe
+D:\ISTA\ASP.Net\Projet ASP\Projet ASP\bin\roslyn\VBCSCompiler.exe
+D:\ISTA\ASP.Net\Projet ASP\Projet ASP\bin\roslyn\VBCSCompiler.exe.config
+D:\ISTA\ASP.Net\Projet ASP\Projet ASP\bin\Projet ASP.dll.config
+D:\ISTA\ASP.Net\Projet ASP\Projet ASP\bin\Projet ASP.dll
+D:\ISTA\ASP.Net\Projet ASP\Projet ASP\bin\Projet ASP.pdb
+D:\ISTA\ASP.Net\Projet ASP\Projet ASP\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\ISTA\ASP.Net\Projet ASP\Projet ASP\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\ISTA\ASP.Net\Projet ASP\Projet ASP\obj\Debug\Projet ASP.dll
+D:\ISTA\ASP.Net\Projet ASP\Projet ASP\obj\Debug\Projet ASP.pdb
+E:\Cancer\Projet ASP\Projet ASP\Projet ASP\obj\Debug\Projet ASP.dll
+E:\Cancer\Projet ASP\Projet ASP\Projet ASP\obj\Debug\Projet ASP.pdb
